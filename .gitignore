@@ -1,0 +1,130 @@
+# Global ignores for EpiphanyLibrary (frontend + backend)
+
+# --------------------
+# OS
+# --------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --------------------
+# Node / frontend
+# --------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+.pnpmfile.cjs
+
+# build output
+dist/
+build/
+out/
+coverage/
+
+# Next/Vite/CRA
+.next/
+/.turbo/
+.vite/
+.env.local
+.env.*.local
+.env.production.local
+
+# --------------------
+# .NET / backend
+# --------------------
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+.history/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET temporary files
+project.lock.json
+artifacts/
+
+# Runtime
+*.dll
+*.exe
+*.pdb
+*.app
+*.appTrace
+*.apphost
+
+# NuGet
+*.nupkg
+*.snupkg
+# Packages folder
+packages/
+
+# Visual Studio cache/options
+*.VC.db
+*.VC.VC.opendb
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+
+# IIS Express
+/.vs/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Secrets and environment
+appsettings.*.json
+secrets.json
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# JetBrains Rider
+.idea/
+
+# Docker
+docker-compose.override.yml
+**/Dockerfile*
+**/docker-compose.*
+
+# Misc
+*.sqlite
+*.db
+*.sqlite3
+
+# JetBrains Rider
+.idea/
+
+# NUnit / Test results
+TestResults/
+*.trx
+
+# Generated files
+*.g.cs
+*.Designer.cs
+
+# Ignore build artifacts in backend bin/obj nested under projects
+**/bin/
+**/obj/
+
+# Keep the gitignore itself
+!.gitignore
