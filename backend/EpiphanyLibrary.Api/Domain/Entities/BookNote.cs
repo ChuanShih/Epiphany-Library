@@ -1,0 +1,33 @@
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace EpiphanyLibrary.Api.Domain.Entities;
+
+public class BookNote : BaseEntity
+{
+    [BsonElement("title")]
+    public string Title { get; set; } = string.Empty;
+
+    [BsonElement("content")]
+    public string Content { get; set; } = string.Empty;
+
+    [BsonElement("authorId")]
+    public string AuthorId { get; set; } = string.Empty;
+
+    // Business rules
+    public void UpdateContent(string title, string content)
+    {
+        if (string.IsNullOrWhiteSpace(title))
+            throw new ArgumentException("Title cannot be empty", nameof(title));
+
+        if (string.IsNullOrWhiteSpace(content))
+            throw new ArgumentException("Content cannot be empty", nameof(content));
+
+        Title = title.Trim();
+        Content = content.Trim();
+    }
+
+    public bool IsAuthoredBy(string userId)
+    {
+        return AuthorId == userId;
+    }
+}
