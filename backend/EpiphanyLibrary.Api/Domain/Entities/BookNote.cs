@@ -1,16 +1,9 @@
-using MongoDB.Bson.Serialization.Attributes;
-
 namespace EpiphanyLibrary.Api.Domain.Entities;
 
 public class BookNote : BaseEntity
 {
-    [BsonElement("title")]
     public string Title { get; set; } = string.Empty;
-
-    [BsonElement("content")]
     public string Content { get; set; } = string.Empty;
-
-    [BsonElement("authorId")]
     public string AuthorId { get; set; } = string.Empty;
 
     // Business rules
@@ -26,8 +19,5 @@ public class BookNote : BaseEntity
         Content = content.Trim();
     }
 
-    public bool IsAuthoredBy(string userId)
-    {
-        return AuthorId == userId;
-    }
+    public bool IsAuthoredBy(string userId) => AuthorId == userId;
 }

@@ -1,13 +1,8 @@
-using MongoDB.Bson.Serialization.Attributes;
-
 namespace EpiphanyLibrary.Api.Domain.Entities;
 
 public class User : BaseEntity
 {
-    [BsonElement("username")]
     public string Username { get; set; } = string.Empty;
-
-    [BsonElement("passwordHash")]
     public string PasswordHash { get; set; } = string.Empty;
 
     // Business rules
